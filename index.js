@@ -43,15 +43,15 @@ app.get('/createemployee', (req, res)=>{
         res.send('Employee Table created')
     })
 })
-// app.get('/employee1', (req, res)=>{
-//     let post = {name:"Radha", designation:"Teacher"};
-//     let sql = 'INSERT INTO employee SET ?';
-//     let query = db.query
-//     db.query(sql,post,error=>{
-//         if(error){
-//             return error
-//         }
-//         res.send('Employee added');
-//     })
-// })
+app.get('/employee1', (req, res)=>{
+    let post = {name:"Radha", designation:"Teacher"};
+    let sql = 'INSERT INTO employee SET ?';
+    let query = db.query
+    db.query(sql,post,error=>{
+        if(error){
+            return error
+        }
+        res.send('Employee added');
+    })
+})
 
