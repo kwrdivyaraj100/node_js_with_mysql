@@ -76,4 +76,15 @@ app.get('/updateemployee/:id', (req, res)=>{
         res.send('Employee updated');
     })
 })
+app.get('/deleteemployee/:id', (req, res)=>{
+    
+    let sql = `DELETE FROM employee WHERE id=${req.params.id}`;
+    db.query(sql,(error)=>{
+        if(error){
+            return error
+        }
+    
+        res.send('Employee deleted');
+    })
+})
 
