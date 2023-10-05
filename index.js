@@ -12,7 +12,7 @@ const db = mysql.createConnection({
 
 });
 
-// module.exports = connection;
+
 
 db.connect(err => {
     if (err) console.log("There is an error while connecting" + err);
@@ -52,6 +52,17 @@ app.get('/employee1', (req, res)=>{
             return error
         }
         res.send('Employee added');
+    })
+})
+
+app.get('/getemployee', (req, res)=>{
+    let sql = 'SELECT * FROM employee';
+    db.query(sql,(error, results)=>{
+        if(error){
+            return error
+        }
+        console.log(results);
+        res.send('Employee details fetched')
     })
 })
 
