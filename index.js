@@ -33,3 +33,13 @@ app.get('/createdb', (req, res)=>{
         res.send('Database created')
     })
 })
+// app.get('/createemployee', (req, res)=>{
+//     let sql = 'CREATE TABLE employee(id int AUTO_INCREMENT, name VARCHAR(50), designation VARCHAR(50), PRIMARY KEY(id))';
+//     db.query(sql,error=>{
+//         if(error){
+//             return error
+//         }
+//         res.send('Employee Table created')
+//     })
+// })
+
