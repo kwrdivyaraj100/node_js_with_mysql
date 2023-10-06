@@ -46,8 +46,7 @@ app.get('/createemployee', (req, res)=>{
 app.get('/employee1', (req, res)=>{
     let post = {name:"Radha", designation:"Teacher"};
     let sql = 'INSERT INTO employee SET ?';
-    let query = db.query
-    db.query(sql,post,error=>{
+    let query = db.query(sql,post,error=>{
         if(error){
             return error
         }
